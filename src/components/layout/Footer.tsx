@@ -76,7 +76,7 @@ const Footer = () => {
         
         <div className="border-t border-stoic-gray/30 mt-10 pt-6 flex flex-col md:flex-row justify-center items-center">
               <p className="text-sm text-gray-500 text-center">
-              © {year} Social Stoic. All rights reserved. Website by Lorenzo Filips <a href="https://github.com/Desk888" className="text-stoic-green-light hover:text-stoic-green transition-colors">(Desk888)</a>.
+              © {year} Social Stoic. All rights reserved. Website by Octav1an888 <a href="https://github.com/0ctav1an888" className="text-stoic-green-light hover:text-stoic-green transition-colors">(Desk888)</a>.
               </p>
             </div>
       </div>
