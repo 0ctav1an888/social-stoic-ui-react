@@ -17,7 +17,6 @@ const Footer = () => {
                 src="https://socialstoic-assets-cdn.s3.eu-west-2.amazonaws.com/logo.png"
                 height={254}
                 width={50}
-                loading="lazy"
                 alt="Social Stoic Logo" 
                 className="h-10 w-auto"
               />
