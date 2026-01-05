@@ -64,7 +64,6 @@ const Contact = () => {
                   src="https://socialstoic-assets-cdn.s3.eu-west-2.amazonaws.com/contact_page_photo.webp"
                   height={4000}
                   width={5000}
-                  loading="lazy"
                   alt="Eddie and Adam - Social Stoic Team"
                   className="w-full"
                   aspectRatio="aspect-[13/9]"
@@ -91,7 +90,6 @@ const Contact = () => {
                     height={0}
                     width={0}
                     alt="Background"
-                    loading="lazy"
                     className="w-full h-full object-cover"
                     aspectRatio="aspect-auto"
                   />
