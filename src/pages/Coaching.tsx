@@ -221,7 +221,6 @@ const Coaching = () => {
                       src={service.imageSrc}
                       height={3542}
                       width={2360}
-                      loading="lazy"
                       alt={service.title} 
                       className="absolute inset-0 w-full h-full object-cover"
                     />
