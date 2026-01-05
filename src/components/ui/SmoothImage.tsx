@@ -45,7 +45,7 @@ const SmoothImage: React.FC<SmoothImageProps> = ({
         srcSet={srcSet}
         sizes={sizes}
         alt={alt}
-        loading={priority ? 'eager' : 'lazy'}
+        loading="eager"
         decoding={priority ? 'sync' : 'async'}
         fetchPriority={priority ? 'high' : 'auto'}
         onLoad={() => setIsLoaded(true)}
