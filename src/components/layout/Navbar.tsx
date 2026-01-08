@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Youtube } from 'lucide-react';
+import { generateSizes, generateSrcSet } from '@/lib/image';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,6 +58,8 @@ const Navbar = () => {
         <Link to="/" className="flex items-center space-x-2 z-30">
           <img 
             src="https://socialstoic-assets-cdn.s3.eu-west-2.amazonaws.com/logo.png"
+            srcSet={generateSrcSet("https://socialstoic-assets-cdn.s3.eu-west-2.amazonaws.com/logo.png")}
+            sizes={generateSizes([{ size: '40px' }])}
             height={254}
             width={50}
             alt="Social Stoic Logo" 
