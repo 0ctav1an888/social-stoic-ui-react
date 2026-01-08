@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/sections/HeroSection';
-import BreadcrumbContainer from '@/components/layout/BreadcrumbContainer';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { MapPin, Calendar, Flag } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -62,14 +61,6 @@ const Bootcamps = () => {
             title="Bootcamps" 
             description="Immersive weekend experiences to transform your dating life across major European cities. Learn practical skills with expert guidance in real-world environments."
           />
-
-          <BreadcrumbContainer
-            items={[
-              { title: 'Home', href: '/' },
-              { title: 'Bootcamps', href: '/bootcamps' },
-            ]}
-          />
-
           <section className="section-padding bg-stoic-black">
             <div className="container-custom">
               <div className="mb-12 max-w-3xl mx-auto text-center">

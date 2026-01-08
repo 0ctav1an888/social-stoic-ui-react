@@ -4,7 +4,6 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import BreadcrumbContainer from '@/components/layout/BreadcrumbContainer';
 import { generateOrganizationSchema, generateSchemaScript } from '@/lib/structuredData';
 
 const coachingServices = [
@@ -142,7 +141,6 @@ const Coaching = () => {
       <Navbar />
       
       <main className="page-transition pt-24">
-        <BreadcrumbContainer />
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 z-0">

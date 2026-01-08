@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import { extractYouTubeVideoId, getYouTubeEmbedUrl } from '@/lib/youtube';
 import { X } from 'lucide-react';
 import { Helmet } from 'react-helmet';
-import BreadcrumbContainer from '@/components/layout/BreadcrumbContainer';
 import { generateOrganizationSchema } from '@/lib/structuredData';
 
 // Real YouTube video data
@@ -125,7 +124,6 @@ const Videos = () => {
       </Helmet>
       
       <main className="page-transition pt-24">
-        <BreadcrumbContainer />
         {/* Hero Section */}
         <section className="py-16 md:py-24">
           <div className="container-custom">
