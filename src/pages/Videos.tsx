@@ -8,6 +8,7 @@ import { extractYouTubeVideoId, getYouTubeEmbedUrl } from '@/lib/youtube';
 import { X } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import { generateOrganizationSchema } from '@/lib/structuredData';
+import { generateSizes, generateSrcSet } from '@/lib/image';
 
 // Real YouTube video data
 const videos = [
@@ -216,6 +217,8 @@ const Videos = () => {
                 <div className="relative hidden md:block">
                   <img 
                     src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                    srcSet={generateSrcSet("https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")}
+                    sizes={generateSizes()}
                     alt="Personal coaching" 
                     className="absolute inset-0 w-full h-full object-cover"
                   />

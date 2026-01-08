@@ -5,6 +5,7 @@ import Footer from '@/components/layout/Footer';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { generateOrganizationSchema, generateSchemaScript } from '@/lib/structuredData';
+import { generateSizes, generateSrcSet } from '@/lib/image';
 
 const coachingServices = [
   {
@@ -146,6 +147,8 @@ const Coaching = () => {
           <div className="absolute inset-0 z-0">
             <img
               src="https://images.unsplash.com/photo-1604700403855-dc64a1320324?q=80&w=3538&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              srcSet={generateSrcSet("https://images.unsplash.com/photo-1604700403855-dc64a1320324?q=80&w=3538&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")}
+              sizes={generateSizes()}
               height={3542}
               width={2360}
               alt="Background"
@@ -217,6 +220,8 @@ const Coaching = () => {
                   }`}>
                     <img 
                       src={service.imageSrc}
+                      srcSet={generateSrcSet(service.imageSrc)}
+                      sizes={generateSizes()}
                       height={3542}
                       width={2360}
                       alt={service.title} 

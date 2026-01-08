@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Youtube } from 'lucide-react';
+import { generateSizes, generateSrcSet } from '@/lib/image';
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -15,6 +16,8 @@ const Footer = () => {
             <Link to="/" className="flex items-center space-x-2">
               <img 
                 src="https://socialstoic-assets-cdn.s3.eu-west-2.amazonaws.com/logo.png"
+                srcSet={generateSrcSet("https://socialstoic-assets-cdn.s3.eu-west-2.amazonaws.com/logo.png")}
+                sizes={generateSizes([{ size: '40px' }])}
                 height={254}
                 width={50}
                 alt="Social Stoic Logo" 

@@ -5,8 +5,11 @@
  * @returns srcSet string
  */
 export const generateSrcSet = (src: string, widths: number[] = [320, 640, 768, 1024, 1280, 1536]): string => {
-  // If the image is from an external source (like a CDN), return the original src
-  if (src.startsWith('http') || src.startsWith('//')) {
+  const isExternal = src.startsWith('http') || src.startsWith('//');
+  const cdnHosts = new Set(['socialstoic-assets-cdn.s3.eu-west-2.amazonaws.com']);
+  const url = new URL(src, window.location.origin);
+
+  if (isExternal && !cdnHosts.has(url.hostname)) {
     return src;
   }
 
@@ -14,9 +17,9 @@ export const generateSrcSet = (src: string, widths: number[] = [320, 640, 768, 1
   return widths
     .map(width => {
       // Add width parameter to the URL
-      const url = new URL(src, window.location.origin);
-      url.searchParams.set('w', width.toString());
-      return `${url.toString()} ${width}w`;
+      const sizedUrl = new URL(url.toString());
+      sizedUrl.searchParams.set('w', width.toString());
+      return `${sizedUrl.toString()} ${width}w`;
     })
     .join(', ');
 };
