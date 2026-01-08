@@ -68,6 +68,8 @@ const Index = () => {
               alt="Background"
               height={3540}
               width={2360}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-stoic-black/95 to-stoic-black/80"></div>
