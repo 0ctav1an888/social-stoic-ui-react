@@ -18,6 +18,8 @@ const Footer = () => {
                 height={254}
                 width={50}
                 alt="Social Stoic Logo" 
+                loading="lazy"
+                decoding="async"
                 className="h-10 w-auto"
               />
             </Link>
